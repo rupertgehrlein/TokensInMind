@@ -1,0 +1,72 @@
+<div class="columns is-centered is-mobile">
+  <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-widescreen">
+    <h1 class="title" [innerHTML]="'Block.Titel' | translate"></h1>
+    <p [innerHTML]="'Block.Absatz 1' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 2' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 3' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 4' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 5' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 6' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 7' | translate"></p>
+    <p [innerHTML]="'Block.Absatz 8' | translate"></p>
+
+    <div class="box accent-color tasks">
+      <h2 class="label" style="color: #ffffff" [innerHTML]="'Block.Aufgaben.Titel' | translate"></h2>
+      <ol>
+        <li [innerHTML]="'Block.Aufgaben.1' | translate"></li>
+        <li [innerHTML]="'Block.Aufgaben.2' | translate"></li>
+        <li [innerHTML]="'Block.Aufgaben.3' | translate"></li>
+        <li [innerHTML]="'Block.Aufgaben.4' | translate"></li>
+        <li [innerHTML]="'Block.Aufgaben.5' | translate"></li>
+        <li [innerHTML]="'Block.Aufgaben.6' | translate"></li>
+      </ol>
+    </div>
+
+    <app-single-block></app-single-block>
+
+  </div>
+</div>
+
+<!-- Erklärungstexte -->
+
+<dialog id="headerExp" class="explanationModal">
+  <a onclick="headerExp.close()">
+    <i class="material-icons">close</i>
+  </a>
+  <p>Erklärung für einen Header</p>
+</dialog>
+
+<dialog id="hashExp" class="explanationModal">
+  <a onclick="hashExp.close()">
+    <i class="material-icons">close</i>
+  </a>
+  <p>Ein Hash-Wert ist eine Art Fingerabdruck für Daten. Er wird verwendet, um Daten zu identifizieren und zu
+    vergleichen. Hash-Werte sind sehr kurz und einfach zu speichern. Das macht sie perfekt für die Verwendung in
+    Datenbanken und anderen Anwendungen, in denen viele Daten gespeichert werden müssen.
+    Um dir ein Bild zu machen, kannst du dir einen Hash-Wert wie einen Code vorstellen, der aus einer Reihe von
+    Buchstaben und Zahlen besteht. Dieser Code wird aus einem Stück Text oder einer Datei generiert. Der Hash-Wert ist
+    immer gleich, solange die Daten gleich bleiben. Wenn sich die Daten aber ändern, dann ändert sich auch der
+    Hash-Wert. Das macht die Benutzung von Hash-Werten also sehr sicher für das speichern deiner Daten.
+    Hash-Werte werden in vielen verschiedenen Bereichen eingesetzt, z. B. in der Computersicherheit, in der
+    Datenkomprimierung und in der Datenübertragung. Sie werden auch verwendet, um Dateien zu identifizieren und zu
+    vergleichen.
+    Hash-Werte sind ein wichtiges Werkzeug für die Computersicherheit. Sie können verwendet werden, um Dateien zu
+    schützen und zu verhindern, dass sie geändert werden.</p>
+</dialog>
+
+<dialog id="nonceExp" class="explanationModal">
+  <a onclick="nonceExp.close()">
+    <i class="material-icons">close</i>
+  </a>
+  <p>NONCE steht für "Number used ONCE", was auf Deutsch "Zahl, die einmal verwendet wird" bedeutet. Eine Nonce ist eine
+    einmalige Sequenz von Zeichen, die für eine bestimmte Transaktion verwendet wird. Sie wird verwendet, um die
+    Sicherheit der Transaktion zu erhöhen und zu verhindern, dass sie wiederholt wird.
+    Nonce-Werte werden in vielen verschiedenen Bereichen eingesetzt, z. B. in der Computersicherheit, in der
+    Datenübertragung und in der Kryptographie. Sie werden auch verwendet, um Transaktionen in Blockchain-Netzwerken zu
+    authentifizieren.
+    Hier ist ein Beispiel dafür, wie eine Nonce verwendet werden kann. Du sendest eine Geldüberweisung von deinem
+    Bankkonto auf das Bankkonto einer anderen Person. Die Bank generiert dann eine Nonce und fügt sie der Transaktion
+    hinzu. Die Nonce wird verwendet, um die Transaktion zu authentifizieren und zu verhindern, dass sie wiederholt wird.
+    Nonce-Werte sind ein wichtiges Werkzeug für die Computersicherheit. Sie können verwendet werden, um Transaktionen zu
+    schützen und zu verhindern, dass sie wiederholt werden.</p>
+</dialog>

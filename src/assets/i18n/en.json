@@ -1,0 +1,138 @@
+{
+  "Impressum" : "Legal Notice",
+  "Datenschutz" : "Data Protection",
+  "Kontakt" : "Contact",
+  "Baustelle" : "The website is still under construction. <br><br> Currently, only the sections \"Cryptography\" and \"Blockchain\" are available. <br><br> <b><u>Du kannst die Sprache oben rechts in der Ecke umstellen.</b></u>",
+  "Kryptographie" : {
+    "Titel" : "Cryptography",
+    "Absatz 1" : "Cryptography is like a secret puzzle game that helps us encrypt information securely. Imagine you want to send an important message to a friend, but you want to make sure that no one else can read it. Cryptography helps us with that! We've also provided a few examples to your teacher so that you can encrypt something yourself. <br><br> In cryptography, we use special codes and secrets to protect our information. To make these secrets or puzzles particularly challenging, we use algorithms in computer science. These algorithms take our information and transform it into something incomprehensible for others. Only those who know the secret code can decrypt the information again.",
+    "Absatz 2" : "There are different types of cryptographic methods and algorithms that can be used. One of these algorithms is the SHA-256 algorithm. That stands for \"Secure Hash Algorithm 256-bit\". It's a very secure algorithm that converts information into a unique hash value. <br><br> A hash value is like a digital fingerprint for information. The SHA-256 algorithm takes the information we want to encrypt and calculates a unique hash value for it. The hash value is a combination of letters and numbers that represents the encrypted information.",
+    "Absatz 3" : "The SHA-256 algorithm is designed in such a way that deriving the original content from the hash value is very difficult. Even if a small detail in the information changes, the hash value changes completely. This makes the encryption very secure and protects our information.",
+    "Absatz 4" : "In addition to the SHA-256 algorithm, there are many other cryptographic methods and algorithms. For example, there's the RSA algorithm, which uses special mathematical numbers to encrypt information. There's also the Caesar algorithm, where letters in the alphabet are shifted to encrypt the information. <br><br> Cryptography and the algorithms used help us encrypt and protect information securely. They play an important role in data security and technologies like blockchain.",
+    "Button 1" : "Click here if you want to find out how secure the SHA-256 algorithm really is",
+    "Button 2" : "Click here if you want to try hashing a block",
+    "Aufgaben" : {
+      "Titel" : "Try it out!",
+      "Hinweis" : "<u>Note:</u> In our encryption and decryption, only uppercase letters are displayed. However, you can also input lowercase letters. Just so you're not surprised. Special characters like a period or a space won't be encrypted but will still be displayed.",
+      "Aufgabentext" : "We've prepared a small encryption tool for you below this box. In the upper box, you can encrypt a message. Just enter any text and choose a letter shift. When you're ready, click \"Encrypt\" and the encrypted text will be displayed. The process works the other way around in the lower box. Get an encrypted text and the shift value from your neighbor. Then enter the data in the lower box and decrypt the secret message!"
+    },
+    "Verschlüsselung" : {
+      "Überschrift 1" : "Encrypt Message:",
+      "Überschrift 2" : "Decrypt Message:",
+      "Text" : "Text:",
+      "Verschiebung" : "Shift:",
+      "Button 1" : "Encrypt",
+      "Button 2" : "Decrypt"
+    }
+  },
+  "SHA-256" : {
+    "Subtitel" : "Digression",
+    "Titel" : "How secure is SHA-256?",
+    "Absatz 1" : "How secure SHA-256 really is can be challenging to put into words or visualize. However, we'll still try to give you an illustration. While it's a bit complex, it will show you that encryption with SHA-256 is truly very secure. <br> As you may have noticed, encrypting data using SHA-256 is relatively fast. It usually takes only a few seconds, if that. The difficulty arises when one only has the hash value and wants to derive the original encrypted data from it. <br> In fact, this process is so challenging that, until now, no one has succeeded in finding anything better than \"simply\" guessing. A computer can do this faster than you or we can, but even so, SHA-256 remains incredibly secure.",
+    "Absatz 2" : "In the worst case, guessing would require around 2<sup>256</sup> attempts. However, the number is far too large for us to grasp. Consequently, we attempt to break it down bit by bit and examine it.",
+    "Absatz 3" : "Conveniently, we can divide 2<sup>256</sup> into 8 parts, resulting in 2<sup>32</sup>. You probably haven't encountered this in math class, but you can trust us that it's accurate. We can comprehend the number 2<sup>32</sup> more easily. When we input that into a calculator, we get 4,294,967,296. This is still an extremely large number, but it's something we can work with more effectively.",
+    "Absatz 4" : "So, we have now transformed 2<sup>256</sup> into the following:",
+    "Absatz 5" : "and we already know that 2<sup>32</sup> is approximately 4 billion. With this, we proceed to calculate step by step.",
+    "32" : "For particularly fast trial and error, a graphics card is suitable in a computer. The processor can do it as well, but the processor is better at solving complex tasks rather than just \"guessing\". That's why a processor has fewer computing cores. In contrast, a graphics card has many more small computing cores that can handle simpler tasks. <br><br> Super fast modern graphics cards can perform around 500 million to 1 billion calculations per second. This means that for 2<sup>32</sup> calculations per second, we would need to install about 4-8 graphics cards in a computer. While it's rare that someone would actually do something like this, let's pretend that it's entirely normal for a computer to be equipped with so many fast graphics cards, and from now on, we'll call this computer a \"Super-Computer.\"",
+    "64" : "From these very \"Super-Computers\", we would now need about 4 billion of them to achieve a computational power of 2<sup>64</sup> calculations per second. <br><br> To put this into perspective: Google currently operates somewhere between one and five million servers worldwide. An exact number isn't available. Certainly, not every server is as powerful as our previously mentioned \"Super-Computer\". However, if they were, we would need approximately 1000 Googles to achieve the desired computational power of 2<sup>64</sup>. Quite a lot... For the rest of the calculation, let's simply call these 1000 Googles \"Kilo-Google\" (the prefix \"kilo\" is used in mathematics to represent 1000).",
+    "96" : "In the next step, let's assume that a lot of people have their own \"Kilo-Google\" at home. How many people, you ask? Exactly! 4 billion people. So, roughly half of the world's population has their own \"Kilo-Google\" at home, each filled with \"Super-Computers\". But that's still not enough...",
+    "128" : "Next, we need to go even bigger. We now need 4 billion times this Earth, where half of humanity owns their own \"Kilo-Google\" filled with \"Super-Computers\". <br><br> While we can't be certain about the number of planets in our galaxy, we do know that there are around 100 to 400 billion stars in our galaxy. This means that every 100th star in our galaxy would need to have such an Earth in order to achieve 2<sup>128</sup> calculations per second. Phew... halfway there.",
+    "160" : "This step is simpler again. We \"just\" need 4 billion of these galaxies.",
+    "192" : "Getting even bigger becomes quite nonsensical because it's nearly impossible to grasp such a vast number of planets and galaxies. So, let's consider the time it takes for the calculation to complete. After all, we don't necessarily need to crack a hash value every second. <br><br> 4 billion seconds. That's approximately 127 years. Wow.",
+    "224" : "And now multiply that by 4 billion... <br><br> This brings us to around 507 billion years. That's approximately 37 times the age of the entire universe.",
+    "256" : "For those who've been paying close attention, you'll notice that we've only covered 7 instances of 2<sup>32</sup>. One instance is still left. This means that if across 4 billion galaxies, on 4 billion planets, with 4 billion people owning their own \"Kilo-Google\" full of \"Super-Computers\", and over the span of 507 billion years, they collectively tried to crack a hash value, they would succeed in <b>one out of 4 billion</b> cases. To put this in perspective: It would still be more likely to win the lottery 1700 times than to crack SHA-256. So, it's incredibly secure..."
+  },
+  "Blockchain-Home" : {
+    "Titel" : "The Blockchain",
+    "Absatz" : "The topic of Blockchain is vast and somewhat complex. Therefore, on this page, we've included various interactive exercises and information texts for you. Here, we present individual components of the Blockchain to help you understand the connection between these components and the previous chapter on cryptography. It's best to click through the chapters step by step and read the corresponding text. Further down on each page, you'll find a few tasks and an interactive section where you can try out for yourself what exactly happens in a Blockchain.",
+    "Box" : {
+      "Absatz 1" : "In the <u>first chapter</u>, you'll learn how an individual block of a Blockchain actually functions, what its purpose is, and why it's needed.",
+      "Absatz 2" : "In the <u>second chapter</u>, you'll learn how multiple individual blocks can come together to form a Blockchain. Here, our primary focus is on helping you understand how the technology manages to uniquely link all the blocks of a Blockchain together.",
+      "Absatz 3" : "In the <u>third chapter</u>, you'll learn how the difficulty of hash computation can be manipulated. We set up specific rules for this and utilize the so-called \"nonce\".",
+      "Absatz 4" : "In the <u>fourth chapter</u>, you'll learn how the hash value is computed. As this is quite complex, we recommend checking out this chapter only if you've grasped the rest to some extent and really want to understand how it works roughly. However, for the rest of the website, this isn't particularly crucial. It's sufficient to know that data can be encrypted using a hash algorithm. Even many professionals don't know exactly how it's done; after all, that's what computers are for!"
+    },
+    "Buttons" : {
+      "1" : "How does an individual block in a blockchain work?",
+      "2" : "What happens when we have more than one block?",
+      "3" : "How can I make the computation more difficult?",
+      "4" : "How does the creation of a hash value work?"
+    }
+  },
+  "Block" : {
+    "Titel" : "A block of a blockchain",
+    "Absatz 1" : "An individual block in the blockchain is like a crucial building block in a digital structure. Imagine you want to store a list of transactions, such as who sent something, who received it, how much was sent, and when the transaction occurred. Instead of storing this information individually, we can consolidate it into a block.",
+    "Absatz 2" : "A block consists of several elements. First, we have the block header. The header contains crucial information about the block, such as the version of the blockchain, timestamps of transactions, and a special code we call a hash. This hash code acts like a digital fingerprint for the block, making it unique.",
+    "Absatz 3" : "In addition to the header, the block also contains a list of transactions. Here, all the details about the transactions are stored, such as who sent something, who received it, and how much was sent. These transactions are consolidated and stored in the block.",
+    "Absatz 4" : "To connect the block with other blocks in the blockchain, it also contains a reference to the previous block. This reference is represented by the hash value of the previous block. This linkage creates a chain of blocks, as each block knows and is connected to the previous block. This is what makes the blockchain secure and stable.",
+    "Absatz 5" : "Additionally, the block contains a nonce. The nonce is like a secret password or a random number that is used only once. It is encrypted along with other information in the block and helps ensure the integrity of the information.",
+    "Absatz 6" : "Once the block is complete, the hash code is calculated by inputting the content of the block, including the header, transactions, previous block reference, and nonce, into a specialized algorithm. This algorithm computes the hash code, which then makes the block unique. Any change in the block's information would alter the hash code, rendering the block invalid.",
+    "Absatz 7" : "The completed block is then added to the blockchain and sent to the other participants in the network. Each participant can verify the block by checking the hash code and ensuring that it matches the previous block in the chain.",
+    "Absatz 8" : "So, an individual block in the blockchain is like a sturdy foundation that contains information, securely connects it, and ensures data integrity. Together, these blocks form a blockchain, serving as a transparent and secure digital ledger.",
+    "Aufgaben" : {
+      "Titel" : "Tasks",
+      "1" : "Compare all the details with your neighbor when the block is still untouched. Do you have the same nonce? The same hash?",
+      "2" : "Now both of you enter your first names and see how the block changes.",
+      "3" : "Next, click on \"Calculate.\" Then, take a look at what has changed and compare your values.",
+      "4" : "Now, try entering several entries in the form of a cash book, for example: <br> Marie owes Karim €10 <br> Karim owes Leonie €20 <br> Leonie owes Kim €15 <br> Then, check if both of you get the same hash value.",
+      "5" : "What happens if you try to change a name or a number now? And what happens when you press \"Calculate\" again afterwards?",
+      "6" : "Try to record your observations and results. Exchange thoughts with your neighbor and make hypotheses about why a block in a blockchain functions the way it does. A revisit to the explanation text above might help you form an idea."
+    }
+  },
+  "SingleBlock" : {
+    "Daten" : "Data",
+    "Vorgänger" : "Previous",
+    "Berechne" : "Calculate"
+  },
+  "Blockchain" : {
+    "Titel" : "Structure of a Blockchain",
+    "Absatz 1" : "The blockchain is like a special digital ledger where we can securely and transparently record information. Imagine you want to store a list of transactions, such as who sent something, who received it, how much was sent, and when the transaction occurred. Instead of writing this information in a regular ledger, we use the blockchain.",
+    "Absatz 2" : "The blockchain is composed of many blocks that are interconnected. Each block contains information about transactions and a special code called a hash. The hash code acts like a unique digital fingerprint for the block, making it distinct. The hash code is calculated from the block's information and ensures that the block hasn't been altered.",
+    "Absatz 3" : "What makes a blockchain special is that it's collectively managed by many computers instead of a single person or company. These computers together form a network that verifies the blockchain. Each computer in this network has a copy of the entire blockchain.",
+    "Absatz 4" : "Before a transaction is included in a block, it is verified by the computers in the network. The computers ensure that the transaction is genuine and that, for example, the sender has enough funds. Once the verification is complete, the transaction is added to the current block.",
+    "Absatz 5" : "To connect the blocks, each block contains a reference to the previous block. This creates a chain of blocks, as each block knows and is linked to the previous one. This is crucial because if something were to change in a block, all subsequent blocks would also change. A blockchain is thus immutable, as any subsequent false entry in a block would immediately alter the hash values of all following blocks, rendering them incorrect.",
+    "Absatz 6" : "Another important aspect is that the blockchain is transparent. This means that all transactions are visible to everyone. This is useful for preventing fraud and ensuring fairness. You, too, can take a look at a blockchain at any time, although you might not understand everything you see. If you're interested in exploring, you can check out <a class=\"furtherLink\" href=\"https://blockchair.com/\">here</a>. There, you can navigate through various blockchains, look up transactions in each block, and see who performed which transaction. The current hash values are also displayed, along with when the latest block of the respective blockchain was created.",
+    "Aufgaben" : {
+      "Titel" : "Tasks",
+      "1" : "Among the tasks, you'll find a small excerpt from a blockchain. Before entering anything into the fields, try to describe what you see and how a blockchain could be structured.",
+      "2" : "Now, enter something into <b>Block 1</b>. Briefly describe in your own words what happens with the blockchain. What do you think is the reason behind this?",
+      "3" : "Next, enter arbitrary data into <b>Block 2</b> and <b>Block 3</b>. What changes with each entry?",
+      "4" : "Now, click on \"Calculate\" one by one. First on <b>Block 1</b>, then on <b>Block 2</b>, and finally on <b>Block 3</b>. What happens or changes?",
+      "5" : "Now that all blocks are green and correctly calculated again, change the data in <b>Block 2</b>. Do you notice anything different compared to Task 2? Make hypotheses about why the blockchain behaves the way it does.",
+      "6" : "Make a hypothesis about why, in this example, we only allow you to click on \"Calculate\" one by one and not in any order. Why can't you calculate <b>Block 2</b> before calculating <b>Block 1</b> in our blockchain?"
+    }
+  },
+  "Nonce" : {
+    "Titel 1" : "What is the purpose of the NONCE?",
+    "Titel 2" : "How is the difficulty determined in hash calculation?",
+    "Absatz 1" : "In cryptography, the term \"Nonce\" (short for \"number used only once\" or \"number used once\") is used to refer to a number or letter combination that is used only once. Typical ways to generate a Nonce include using (cryptographically secure) random values that are sufficiently large, so the likelihood of reuse is very low, or using a counter. On this website, we're using the counter variant. A Nonce is used whenever an extra layer of security is desired in encryption. For instance, consider signing up on websites like Amazon or YouTube where you need a username or email address along with a password. Websites store your data in their servers to enable you to log in again in the future. However, storing your data as plain text in their databases would pose a significant risk in case of a hack. Therefore, the data is cryptographically encrypted, often using SHA-256. The Nonce is then used to further complicate the decryption of your data in the event of a breach. As you may have read on our website, cracking SHA-256 is already quite challenging, but adding an extra layer of protection to sensitive data doesn't hurt and makes it even more difficult for attackers.",
+    "Absatz 2" : "The difficulty of creating a hash value can be artificially increased. In the example used here, we set the rule that a hash value is only considered valid if it has a certain number of leading zeros. On the other pages regarding the individual block and the blockchain, we set the number of leading zeros to 4. You might have noticed that previously, the hash always had at least 4 leading zeros. Such rules can be created arbitrarily and changed over the course of the blockchain. This is how the Bitcoin blockchain, for example, operates. To demonstrate how quickly and significantly these \"details\" affect the time taken to calculate the hash value, you can specify below how many leading zeros the hash value should have. You can set a minimum of one zero and a maximum of six zeros.",
+    "Aufgaben" : {
+      "Titel" : "Tasks",
+      "Hinweis" : "<i><u>Note</u>: Depending on the speed of your computer or tablet, the calculation may take varying amounts of time. Sometimes, it can take several seconds or even minutes. In our tests, tablets and smartphones were usually faster than laptops. So, don't be surprised if it seems like nothing is happening for a while. Just remain patient and wait.</i>",
+      "Einführung" : "You'll see a slider in the orange box among the tasks. The slider adjusts the difficulty. In our case here, the slider determines how many zeros need to be at the beginning of the hash for it to be considered valid. So, if you set the difficulty to 1, the hash below must have <u>at least one zero</u> at the beginning. If you set the difficulty to 6, there must be <u>at least six zeros</u> at the beginning.",
+      "1" : "Prepare a table with four columns. In the first column, the encrypted text should be placed. In the second column, write down the selected difficulty. In the third column, record the nonce. The fourth column should contain the required time for the calculation. In the end, your table should look something like this: <br><br> <table> <tr> <th>Text</th> <th>Difficulty</th> <th>Nonce</th> <th>Time in ms</th> </tr> <tr> <td>Test 1</td> <td>1</td> <td>4</td> <td>1</td> </tr> <tr> <td>...</td> <td>...</td> <td>...</td> <td>...</td> </tr> </table>",
+      "2" : "Now it's time to collect data for your table. Enter any data for your table. To keep track of where you are and to avoid making the table too large, we recommend combining a short text with the current difficulty level. For example, you could simply write \"Test 1\", \"Test 2\", and so on. Accordingly, for the first run, write the text \"Test 1\" as data and set the difficulty to 1 using the slider. Then click on \"Calculate\", read the time required for calculation under the block, and write everything in your table. Then continue with \"Test 2\" and set the difficulty to 2. Repeat this process until you have tried all difficulties and filled in your table accordingly.",
+      "3" : "If you've worked with coordinate systems in math before, you can try plotting your data on a coordinate system. In this case, you would place the required time on the Y-axis and the difficulty on the X-axis. We have provided a template for your teacher for this purpose. If you haven't worked with coordinate systems yet, try taking a closer look at the times anyway. What do you notice?",
+      "4" : "Our example here only goes up to a difficulty of 6. Try discussing with your neighbor how long it might take for the computer to finish calculating with a difficulty of 7 or even 8. How did you come up with your estimation?",
+      "5" : "As explained earlier, on this website, we work with a nonce in the form of a counter. Try writing down what that actually means. Maybe the varying large numbers you got for different difficulties as nonce values will help you understand."
+    },
+    "Schwierigkeit" : "Select difficulty:",
+    "Berechnung" : "The last hash calculation took: "
+  },
+  "Hash" : {
+    "Titel" : "How is the hash calculated?",
+    "Erklärung" : "The video explaining the topic is still in progress.",
+    "Beispiel 1" : {
+      "Titel" : "1. Simple SHA-256 encryption",
+      "Erklärtext" : "In this example, we're simply running your data through the hash algorithm. As you can see, hashing is extremely fast. At the same time, you should also be able to recognize that even the smallest changes in the data result in a huge difference."
+    },
+    "Beispiel 2" : {
+      "Titel" : "2. SHA-256 encryption with condition and nonce",
+      "Erklärtext" : "In this example, we consider the hash value valid only if it starts with <u>at least 3 zeros</u>. To achieve this, we incorporate the nonce. The process works as follows: First, we check if the hash value of your data already begins with 3 zeros. If it doesn't, we include the nonce in the calculation. Initially, the nonce is set to \"0\". If the hash value still doesn't start with 3 zeros, we increment the nonce by one. We repeat this process until we find a suitable hash value. Generally, the larger the requirement, the longer the calculation usually takes. You can explore this further on our website in the nonce section. <br><br> <b>Question for you:</b> Why does the nonce need to change in order for the hash value to change and meet our condition?"
+    },
+    "Beispiel 3" : {
+      "Titel" : "3. SHA-256 encryption with condition, nonce and respect of previous blocks",
+      "Erklärtext" : "Next, we also include the hash value of the previous block in our calculation. In this case, it's the block from above. Once you've calculated a hash value in the block above, you'll see the value here as the \"previous\". If you make changes in the upper block, the lower block will also change. For this to happen, you'll need to press \"Calculate\" again in the lower block."
+    }
+  }
+}

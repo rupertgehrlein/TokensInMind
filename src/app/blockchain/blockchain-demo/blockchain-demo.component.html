@@ -1,0 +1,173 @@
+<div class="columns is-centered is-mobile">
+  <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-widescreen">
+    <h1 class="title" [innerHTML]="'Blockchain.Titel' | translate"></h1>
+    <p [innerHTML]="'Blockchain.Absatz 1' | translate"></p>
+    <p [innerHTML]="'Blockchain.Absatz 1' | translate"></p>
+    <p [innerHTML]="'Blockchain.Absatz 3' | translate"></p>
+    <p [innerHTML]="'Blockchain.Absatz 4' | translate"></p>
+    <p [innerHTML]="'Blockchain.Absatz 5' | translate"></p>
+    <p [innerHTML]="'Blockchain.Absatz 6' | translate"></p>
+
+    <div class="box accent-color tasks">
+      <h2 class="label" style="color: #ffffff" [innerHTML]="'Blockchain.Aufgaben.Titel' | translate"></h2>
+      <ol>
+        <li [innerHTML]="'Blockchain.Aufgaben.1' | translate"></li>
+        <li [innerHTML]="'Blockchain.Aufgaben.2' | translate"></li>
+        <li [innerHTML]="'Blockchain.Aufgaben.3' | translate"></li>
+        <li [innerHTML]="'Blockchain.Aufgaben.4' | translate"></li>
+        <li [innerHTML]="'Blockchain.Aufgaben.5' | translate"></li>
+        <li [innerHTML]="'Blockchain.Aufgaben.6' | translate"></li>
+      </ol>
+    </div>
+
+  </div>
+</div>
+
+<div class="columns is-centered">
+  <div class="column is-full">
+    <form id="boxes">
+      <div class="box boxBlockChain"
+        [ngClass]="{'has-background-success-light': hashCorrectBlockOne, 'has-background-danger-light': !hashCorrectBlockOne}">
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Block #</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{blockchainBlocks[0].index}}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Nonce</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[0].nonce }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <textarea class="textarea" (input)="onInputBlockOne($event.target['value'])"></textarea>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[0].prevHash }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[0].hash }}">
+          </div>
+        </div>
+        <div class="control">
+          <button (click)="computeNonceBlockOne()" class="button accent-color" type="button" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+        </div>
+      </div>
+
+      <div class="box boxBlockChain"
+        [ngClass]="{'has-background-success-light': hashCorrectBlockTwo, 'has-background-danger-light': !hashCorrectBlockTwo}">
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Block #</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{blockchainBlocks[1].index}}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Nonce</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[1].nonce }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <textarea class="textarea" (input)="onInputBlockTwo($event.target['value'])"></textarea>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[1].prevHash }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[1].hash }}">
+          </div>
+        </div>
+        <div class="control">
+          <button [disabled]="disableButtonTwo" (click)="computeNonceBlockTwo()" class="button accent-color"
+            type="button" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+        </div>
+      </div>
+
+      <div class="box boxBlockChain"
+        [ngClass]="{'has-background-success-light': hashCorrectBlockThree, 'has-background-danger-light': !hashCorrectBlockThree}">
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Block #</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{blockchainBlocks[2].index}}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Nonce</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[2].nonce }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <textarea class="textarea" (input)="onInputBlockThree($event.target['value'])"></textarea>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[2].prevHash }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ blockchainBlocks[2].hash }}">
+          </div>
+        </div>
+        <div class="control">
+          <button [disabled]="disableButtonThree" (click)="computeNonceBlockThree()" class="button accent-color"
+            type="button" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

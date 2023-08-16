@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "bulma/css/bulma.css";
+@import "bulma-extensions";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html {
+  background-color: #f1f3f5;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.columns {
+  margin-top: 0.5rem;
+}
+
+.accent-color {
+  /* background-color: #03103a; */
+  background-image: radial-gradient(at bottom left, #03103a 0%, #041a60 80%);
+  color: #ffffff;
+}
+
+.accent-color:hover {
+  color: #ffffff;
+}
+
+.accent-color:focus {
+  color: #ffffff;
+}
+
+.primary-button {
+  /* background-color: #f7b43d; */
+  background-image: radial-gradient(at bottom left, #f7b43d 0%, #ffc63e 70%);
+}
+
+/* .box.primary-button:hover {
+  box-shadow: 0 0 3px black;
+  margin-top: -10px;
+  transition: ease-in-out 0.5s;
+} */
+
+.secondary-button {
+  background-color: #fff;
+}
+
+.box {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .explanationModal {
+    background-image: radial-gradient(at bottom left, #03103a 0%, #041a60 80%);
+    color: #ffffff;
+    border: #03103a;
+    position: fixed;
+    border-radius: 10px;
+    width: 90%;
+  }
+}
+
+.explanationModal {
+  background-image: radial-gradient(at bottom left, #03103a 0%, #041a60 80%);
+  color: #ffffff;
+  border: #03103a;
+  position: fixed;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.explanationModal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.explanationModal i {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.explanationModalLink {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.explanationModalLink:hover {
+  text-decoration: underline;
+  color: #f7b43d;
+  cursor: help;
+}
+
+.tasks ol {
+  padding: 1rem;
+}
+
+.tasks li {
+  padding: 0.5rem 0;
+}
+
+.furtherLink {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.furtherLink:hover {
+  text-decoration: underline;
+  color: #f7b43d;
+  cursor: pointer;
+}
+
+input[disabled] {
+  color: #7a7a7a !important;
+  background: #f5f5f5 !important;
+  opacity: 1 !important;
+}
+
+table,
+th,
+td {
+  border: 1px solid !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+td {
+  width: 100px;
+}

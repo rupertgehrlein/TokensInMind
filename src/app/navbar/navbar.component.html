@@ -1,0 +1,55 @@
+<nav class="navbar accent-color" role="navigation" aria-label="main navigation"
+  style="padding-left: 1rem; padding-right: 1rem;">
+
+  <div class="navbar-brand">
+    <a routerLink="/" routerLinkActive="active" class="navbar-item">
+      <img src=".\assets\img\Logo.png" class="tokensLogo"
+        style="width: auto; height: auto; max-width: 150px; max-height: 150px;">
+    </a>
+
+    <!-- Visuelles Burgermenu für Mobile -->
+    <a (click)="toggleNavbar()" role="button" class="navbar-burger is-large" aria-label="menu" aria-expanded="false"
+      data-target="navbarBasicExample" #navBurger>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
+
+    <!-- rechtes Ende der Navbar -->
+    <div class="navbar-end">
+      <a id="nav-element" routerLink="/" routerLinkActive="active" class="navbar-item" (click)="toggleNavbar()">
+        Start
+      </a>
+      <a id="nav-element" routerLink="/cryptography" routerLinkActive="active" class="navbar-item"
+        (click)="toggleNavbar()">
+        {{"Kryptographie.Titel" | translate}}
+      </a>
+      <a id="nav-element" routerLink="/blockchain" routerLinkActive="active" class="navbar-item"
+        (click)="toggleNavbar()">
+        Blockchain
+      </a>
+      <!-- <a id="nav-element" routerLink="/cryptocurrency" routerLinkActive="active" class="navbar-item" (click)="toggleNavbar()">
+        Kryptowährung
+      </a>
+      <a id="nav-element" routerLink="/nft" routerLinkActive="active" class="navbar-item" (click)="toggleNavbar()">
+        Non-Fungible Token
+      </a>
+      <a id="nav-element" routerLink="/downloads" routerLinkActive="active" class="navbar-item" (click)="toggleNavbar()">
+        Downloads
+      </a> -->
+
+      <div class="navbar-item">
+        <select class="select" (change)="changeLanguage($event.target['value'])">
+          <option value="de">Deutsch 🇩🇪&emsp;</option>
+          <option value="en">English 🇬🇧&emsp;</option>
+          <!-- Weitere Sprachen hier hinzufügen -->
+        </select>
+      </div>
+
+    </div>
+
+  </div>
+</nav>

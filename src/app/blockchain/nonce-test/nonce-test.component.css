@@ -1,0 +1,13 @@
+.has-text-centered.is-size-5 {
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+td {
+  width: 100px;
+}

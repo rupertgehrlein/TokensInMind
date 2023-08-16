@@ -1,0 +1,13 @@
+img {
+  margin: 1rem auto;
+  display: block;
+}
+
+.is-number {
+  text-align: center;
+  font-size: 40px;
+}
+
+.picture {
+  border-radius: 5px;
+}

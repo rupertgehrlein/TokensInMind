@@ -1,0 +1,243 @@
+<div class="columns is-centered is-mobile">
+  <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-widescreen">
+    <h1 class="label">{{"Kryptographie.Titel" | translate}}</h1>
+    <p [innerHTML]="'Kryptographie.Absatz 1' | translate"></p>
+    <br>
+    <div class="columns is-vcentered">
+      <div class="column is-two-thirds">
+        <p [innerHTML]="'Kryptographie.Absatz 2' | translate"></p>
+      </div>
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+          <a routerLink="sha256" routerLinkActive="active">
+            <div class="box primary-button" style="text-align: center; font-weight: 500;">
+              {{ "Kryptographie.Button 1" | translate }}
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-two-thirds">
+        <p [innerHTML]="'Kryptographie.Absatz 3' | translate"></p>
+      </div>
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+          <a routerLink="/blockchain/block-demo" routerLinkActive="active">
+            <div class="box primary-button" style="text-align: center; font-weight: 500">
+              {{ "Kryptographie.Button 2" | translate }}
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <p [innerHTML]="'Kryptographie.Absatz 4' | translate"></p>
+
+    <hr>
+
+    <!--  <h1 class="label">Aktivitäten für den Unterricht:</h1>
+
+    <div class="columns">
+      <div class="column is-half">
+        <a href="../assets/pdf/CaesarChiffre.pdf" target="_blank" rel="noopener norefferer">
+          <div class="box accent-color">
+            <img src="../assets/img/CeasarChiffreBild.png" style="
+                max-width: 200px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;">
+            <h2 class="title" style="color: #ffffff; margin-top: 1rem;">Ceasar Chiffre</h2>
+            <p>Die Caesar-Chiffre funktioniert so: Man nimmt das Alphabet und verschiebt jeden Buchstaben um eine
+              bestimmte Anzahl. Zum Beispiel könnte man jeden Buchstaben um drei Stellen nach vorne verschieben. Das
+              bedeutet, dass aus dem Buchstaben A ein D wird, aus dem Buchstaben B ein E und so weiter.</p>
+            <p>Der Mann, der diese Methode erfunden hat, hieß Julius Caesar. Er war ein großer Kaiser im alten Rom.
+              Als Kaiser musste er oft wichtige Nachrichten schicken, aber er hatte Angst, dass seine Feinde sie
+              abfangen und lesen würden.</p>
+            <p>Die Caesar-Chiffre ist eine einfache Art der Verschlüsselung. Vielleicht magst du es auch ausprobieren
+              und mit deinen
+              Freunden Codes austauschen!</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <div class="box accent-color">
+          <div class="columns is-vcentered">
+            <div class="column is-one-third">
+              Cooles RSA Bild
+            </div>
+            <div class="column is-two-thirds">
+              <p>RSA</p>
+              <p>Idee 1: Farbfolien - Mischverhätnisse</p>
+              <p>Idee 2: 1 Box mit Möglichkeit zum abschließen - min. 2 Schlösser - Gegenstand der transportiert werden
+                soll</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="box accent-color tasks">
+      <h2 class="label" style="color: #ffffff">{{"Kryptographie.Aufgaben.Titel" | translate}}</h2>
+
+      <i [innerHTML]="'Kryptographie.Aufgaben.Hinweis' | translate"></i>
+
+      <br><br>
+
+      {{"Kryptographie.Aufgaben.Aufgabentext" | translate}}
+    </div>
+
+    <label class="label">{{"Kryptographie.Verschlüsselung.Überschrift 1" | translate}}</label>
+
+    <form>
+      <div class="box">
+
+        <div class="columns is-vcentered">
+          <div class="column is-3">
+            <label class="label">{{"Kryptographie.Verschlüsselung.Text" | translate}}</label>
+          </div>
+          <div class="column is-offset-1">
+            <input type="text" class="input" formControlName="text" (change)="getTextEncode($event)">
+          </div>
+        </div>
+
+        <div class="columns is-vcentered">
+          <div class="column is-3">
+            <label class="label">{{"Kryptographie.Verschlüsselung.Verschiebung" | translate}}</label>
+          </div>
+          <div class="column is-offset-1">
+            <select formControlName="number" (change)="getSelectEncode($event)" [value]="">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="columns is-vcentered">
+          <div class="column is-3">
+            <div class="control">
+              <button class="button accent-color" type="button" (click)="encode()">
+                {{"Kryptographie.Verschlüsselung.Button 1" | translate}}
+              </button>
+            </div>
+          </div>
+          <div class="column is-offset-1" *ngIf="encoded">
+            {{encoded}}
+          </div>
+        </div>
+
+  </div>
+  </form>
+
+  <label class="label" style="padding-top: 2rem;">{{"Kryptographie.Verschlüsselung.Überschrift 2" | translate}}</label>
+
+  <form>
+    <div class="box">
+
+      <div class="columns is-vcentered">
+        <div class="column is-3">
+          <label class="label">{{"Kryptographie.Verschlüsselung.Text" | translate}}</label>
+        </div>
+        <div class="column is-offset-1">
+          <input type="text" class="input" formControlName="text" (change)="getTextDecode($event)">
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="column is-3">
+          <label class="label">{{"Kryptographie.Verschlüsselung.Verschiebung" | translate}}</label>
+        </div>
+        <div class="column is-offset-1">
+          <select formControlName="number" (change)="getSelectDecode($event)" [value]="">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="column is-3">
+          <div class="control">
+            <button class="button accent-color" type="button" (click)="decode()">
+              {{"Kryptographie.Verschlüsselung.Button 2" | translate}}
+            </button>
+          </div>
+        </div>
+        <div class="column is-offset-1" *ngIf="decoded">
+          {{decoded}}
+        </div>
+      </div>
+
+</div>
+</form>
+
+</div>
+</div>
+
+
+<!-- <dialog id="hashExp" class="explanationModal">
+  <a onclick="hashExp.close()">
+    <i class="material-icons">close</i>
+  </a>
+  <p>Ein Hash-Wert ist eine Art Fingerabdruck für Daten. Er wird verwendet, um Daten zu identifizieren und zu
+    vergleichen. Hash-Werte sind sehr kurz und einfach zu speichern. Das macht sie perfekt für die Verwendung in
+    Datenbanken und anderen Anwendungen, in denen viele Daten gespeichert werden müssen.
+    Um dir ein Bild zu machen, kannst du dir einen Hash-Wert wie einen Code vorstellen, der aus einer Reihe von
+    Buchstaben und Zahlen besteht. Dieser Code wird aus einem Stück Text oder einer Datei generiert. Der Hash-Wert ist
+    immer gleich, solange die Daten gleich bleiben. Wenn sich die Daten aber ändern, dann ändert sich auch der
+    Hash-Wert. Das macht die Benutzung von Hash-Werten also sehr sicher für das speichern deiner Daten.
+    Hash-Werte werden in vielen verschiedenen Bereichen eingesetzt, z. B. in der Computersicherheit, in der
+    Datenkomprimierung und in der Datenübertragung. Sie werden auch verwendet, um Dateien zu identifizieren und zu
+    vergleichen.
+    Hash-Werte sind ein wichtiges Werkzeug für die Computersicherheit. Sie können verwendet werden, um Dateien zu
+    schützen und zu verhindern, dass sie geändert werden.</p>
+</dialog> -->

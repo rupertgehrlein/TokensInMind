@@ -1,0 +1,75 @@
+<div class="columns is-centered is-mobile">
+  <div class="column column is-three-quarters-mobile is-two-thirds-tablet is-half-widescreen">
+    <h1 class="label" [innerHTML]="'Blockchain-Home.Titel' | translate"></h1>
+    <p [innerHTML]="'Blockchain-Home.Absatz' | translate"></p>
+    <div class="box accent-color">
+      <p [innerHTML]="'Blockchain-Home.Box.Absatz 1' | translate"></p>
+      <p [innerHTML]="'Blockchain-Home.Box.Absatz 2' | translate"></p>
+      <p [innerHTML]="'Blockchain-Home.Box.Absatz 3' | translate"></p>
+      <p [innerHTML]="'Blockchain-Home.Box.Absatz 4' | translate"></p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <a routerLink="/blockchain/block-demo" routerLinkActive="active">
+          <div class="box primary-button">
+            <div class="theme-heading" [innerHTML]="'Blockchain-Home.Buttons.1' | translate"></div>
+            <!-- <div>
+              <p>
+                Hier lernst du alles wichtige über den Aufbau eines einzeln Blocks innerhalb einer Blockchain.
+                Zusätzlich kannst du einmal ausprobieren, was passiert wenn man Daten in einen Block einträgt und diesen
+                anschließend verschlüsseln möchte.
+              </p>
+            </div> -->
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a routerLink="/blockchain/blockchain-demo" routerLinkActive="active">
+          <div class="box primary-button">
+            <div class="theme-heading" [innerHTML]="'Blockchain-Home.Buttons.2' | translate"></div>
+            <!--  <div>
+              <p>
+                Hier lernst du alles wichtige über den Aufbau einer Blockchain. Wir schauen uns zwar nur ein kleines
+                Beispiel an, aber egal wie groß und lang die Blockchain ist, das Prinzip ist immer das Gleiche.
+                Zusätzlich kannst du einmal ausprobieren, was diesmal passiert wenn man Daten in einen Block einträgt
+                und diesen anschließend verschlüsseln möchte.
+              </p>
+            </div> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        <a routerLink="/blockchain/nonce-test" routerLinkActive="active">
+          <div class="box primary-button">
+            <div class="theme-heading" [innerHTML]="'Blockchain-Home.Buttons.3' | translate"></div>
+            <!--  <div>
+              <p>
+                Hier lernst du, was es mit der NONCE auf sich hat und kannst aktiv die Schwierigkeit der Hash-Berechnung
+                manipulieren. Du wirst schnell erkennen, dass selbst kleine Änderungen in der Schwierigkeit der
+                Berechnung einen großen Einfluss auf die Zeit haben, in der die Berechnung stattfindet.
+              </p>
+            </div> -->
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a routerLink="/blockchain/hash-demo" routerLinkActive="active">
+          <div class="box primary-button">
+            <div class="theme-heading" [innerHTML]="'Blockchain-Home.Buttons.4' | translate"></div>
+            <!-- <div>
+              <p>
+                Hier lernst du wie der Hash-Wert eines Blocks berechnet wird mit dem SHA-256 Algorithmus. Dies ist ganz
+                schön kompliziert, aber wir geben unser Bestes dir trotzdem einen Einblick zu geben.
+              </p>
+            </div> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

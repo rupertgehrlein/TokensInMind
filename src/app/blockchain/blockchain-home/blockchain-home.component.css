@@ -1,0 +1,14 @@
+.has-text-centered {
+  margin-bottom: 2rem;
+}
+
+.box {
+  margin-top: 1rem;
+}
+
+.theme-heading {
+  font-size: 32px;
+  text-align: center;
+  line-height: 32px;
+  min-height: 32px;
+}

@@ -1,0 +1,91 @@
+<div class="columns is-centered is-mobile">
+  <div class="column is-half-widescreen is-two-thirds-tablet is-three-quarters-mobile">
+
+    <h1 class="label" [innerHTML]="'Nonce.Titel 1' | translate"></h1>
+
+    <p [innerHTML]="'Nonce.Absatz 1' | translate"></p>
+
+    <h1 class="label" [innerHTML]="'Nonce.Titel 2' | translate"></h1>
+
+    <p [innerHTML]="'Nonce.Absatz 2' | translate"></p>
+
+    <div class="box accent-color tasks">
+      <h2 class="label" style="color: #ffffff" [innerHTML]="'Nonce.Aufgaben.Titel' | translate"></h2>
+
+      <p [innerHTML]="'Nonce.Aufgaben.Hinweis' | translate"></p>
+      <p [innerHTML]="'Nonce.Aufgaben.Einführung' | translate"></p>
+
+      <ol>
+        <li [innerHTML]="'Nonce.Aufgaben.1' | translate"></li>
+        <li [innerHTML]="'Nonce.Aufgaben.2' | translate"></li>
+        <li [innerHTML]="'Nonce.Aufgaben.3' | translate"></li>
+        <li [innerHTML]="'Nonce.Aufgaben.4' | translate"></li>
+        <li [innerHTML]="'Nonce.Aufgaben.5' | translate"></li>
+      </ol>
+    </div>
+
+    <div class="columns is-vcentered box primary-button">
+      <div class="column is-one-third">
+        <div class="label" [innerHTML]="'Nonce.Schwierigkeit' | translate"></div>
+      </div>
+      <div class="column is-two-thirds">
+        <input (change)="getSliderValue($event)" id="sliderWithValue" class="slider has-output is-fullwidth is-circle"
+          min="1" max="6" value="4" step="1" type="range">
+        <output for="sliderWithValue">{{nonceComplexity}}</output>
+      </div>
+    </div>
+
+    <form>
+      <div class="box"
+        [ngClass]="{'has-background-success-light': hashCorrect, 'has-background-danger-light': !hashCorrect}">
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Block #</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="1">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Nonce</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{newNonce}}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <textarea class="textarea" (input)="onInput($event.target['value'])"></textarea>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{ prevHash }}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-one-fifth">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{newHash}}">
+          </div>
+        </div>
+        <div class="control">
+          <button (click)="compute()" class="button accent-color" type="button" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+        </div>
+      </div>
+    </form>
+    <div class="has-text-centered is-size-5">
+      <p [innerHTML]="'Nonce.Berechnung' | translate"></p>
+      <p>{{ elapsed }}ms // {{ elapsed / 1000}}s</p>
+    </div>
+  </div>
+</div>

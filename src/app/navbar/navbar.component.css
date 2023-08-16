@@ -1,0 +1,27 @@
+.navbar-burger.is-large {
+  transform: scale(2) translateX(-20%) translateY(+20%);
+}
+
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  a#nav-element.navbar-item{
+    color: #03103a;
+  }
+}
+
+.navbar .navbar-burger {
+  color: #ffffff;
+}
+
+#nav-element {
+  color: #ffffff;
+}
+
+#nav-element:hover {
+  color: #03103a;
+  background-color: #f1f3f5;
+}
+
+#nav-element:focus {
+  color: #03103a;
+  background-color: #f1f3f5;
+}

@@ -1,0 +1,50 @@
+<form>
+  <div class="box"
+    [ngClass]="{'has-background-success-light': hashCorrect, 'has-background-danger-light': !hashCorrect}">
+    <div class="columns is-vcentered">
+      <div class="column is-one-fifth">
+        <label class="label"><span class="tooltip" data-tooltip="Noch kümmern wir uns also nicht um eine Blockchain,
+sondern nur um einen einzigen Block. Deswegen kannst du hier rechts nichts eintragen.">
+            Block #</span></label>
+      </div>
+      <div class="column">
+        <input disabled type="text" class="input" value="1">
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-one-fifth">
+        <label class="label">Nonce</label>
+      </div>
+      <div class="column">
+        <input disabled type="text" class="input" value="{{newNonce}}">
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-one-fifth">
+        <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+      </div>
+      <div class="column">
+        <textarea class="textarea" (input)="onInput($event.target['value'])"></textarea>
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-one-fifth">
+        <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+      </div>
+      <div class="column">
+        <input disabled type="text" class="input" value="{{ prevHash }}">
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-one-fifth">
+        <label class="label">Hash</label>
+      </div>
+      <div class="column">
+        <input disabled type="text" class="input" value="{{newHash}}">
+      </div>
+    </div>
+    <div class="control">
+      <button (click)="computeHash()" class="button accent-color" type="button" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,89 @@
+<div class="columns is-mobile is-centered">
+  <div class="column is-half-widescreen is-two-thirds-tablet is-three-quarters-mobile">
+    <h1 class="label" [innerHTML]="'Hash.Titel' | translate"></h1>
+    <p [innerHTML]="'Hash.Erklärung' | translate"></p>
+
+    <label class="label" style="margin-top: 3rem;" [innerHTML]="'Hash.Beispiel 1.Titel' | translate"></label>
+    <p [innerHTML]="'Hash.Beispiel 1.Erklärtext' | translate"></p>
+
+    <div class="columns box">
+      <div class="column">
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <input (input)="computeHashOne($event.target['value'])" type="text" class="input">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled value="{{hash1}}" type="text" class="input">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <label class="label" style="margin-top: 3rem;" [innerHTML]="'Hash.Beispiel 2.Titel' | translate"></label>
+    <p [innerHTML]="'Hash.Beispiel 2.Erklärtext' | translate"></p>
+
+    <div class="columns box">
+      <div class="column">
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <input (change)="onInputTwo($event.target['value'])" type="text" class="input">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled value="{{newHash2}}" type="text" class="input">
+          </div>
+        </div>
+        <button class="button accent-color" type="button" (click)="computeHashTwo()" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+      </div>
+    </div>
+
+    <label class="label" style="margin-top: 3rem;" [innerHTML]="'Hash.Beispiel 3.Titel' | translate"></label>
+    <p [innerHTML]="'Hash.Beispiel 3.Erklärtext' | translate"></p>
+
+    <div class="columns box">
+      <div class="column">
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label" [innerHTML]="'SingleBlock.Vorgänger' | translate"></label>
+          </div>
+          <div class="column">
+            <input disabled type="text" class="input" value="{{newHash2}}">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label" [innerHTML]="'SingleBlock.Daten' | translate"></label>
+          </div>
+          <div class="column">
+            <input (change)="onInputThree($event.target['value'])" type="text" class="input">
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2">
+            <label class="label">Hash</label>
+          </div>
+          <div class="column">
+            <input disabled value="{{newHash3}}" type="text" class="input">
+          </div>
+        </div>
+        <button class="button accent-color" type="button" (click)="computeHashThree()" [innerHTML]="'SingleBlock.Berechne' | translate"></button>
+      </div>
+    </div>
+
+  </div>
+</div>
